@@ -21,6 +21,12 @@
 
 ---
 
+# Linux: ✔️
+
+## Termux: Testing
+
+### Windows: Not tested 
+
 # Installation
 
 ## 🐧 Linux
