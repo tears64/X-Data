@@ -35,7 +35,7 @@ It provides a collection of tools for public-source research, network informatio
 | Platform   | Status              |
 | ---------- | ------------------- |
 | 🐧 Linux   | ✔️ Tested           |
-| 📱 Termux  | ✔️ Testing          |
+| 📱 Termux  | ✔️ Tested           |
 | 🪟 Windows | ⚠️ Not fully tested |
 
 ---
