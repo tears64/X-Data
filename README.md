@@ -1,37 +1,50 @@
 # X-Data
 
-**X-Data** is a modular OSINT and information-gathering multitool written in Python.
+**X-Data** is a modular, cross-platform OSINT and information-gathering multitool written in Python.
+
+It provides a collection of tools for public-source research, network information, file analysis, and other legitimate OSINT workflows.
 
 ## Features
 
-* Domain intelligence
-* Email intelligence
-* IP lookup
 * Username search
+* Email intelligence
+* Domain intelligence
+* IP intelligence
 * URL analysis
-* Hash utilities
-* HTTP headers
-* Metadata analysis
-* Password utilities
-* Social intelligence
-* Search utilities
-* Locator tools
+* HTTP header analysis
+* File metadata analysis
+* File hash utilities
+* Password generator
+* Public IP locator
+* Search query generator
+* Port scanner
+* Device information
+* Web snapshot / archiving
+* Public Snapchat / TikTok intelligence
+* OSINT resources
+* Discord integration
+* Self-hosted TempMail
+* Interactive CLI interface
 
 > ⚠️ **Disclaimer:** X-Data is intended for educational purposes, authorized security testing, and legitimate OSINT research. Only use it against systems, accounts, domains, or data you are authorized to investigate.
 
 ---
 
-# Linux: ✔️
+# 🖥️ Platform Status
 
-## Termux: Testing
+| Platform   | Status              |
+| ---------- | ------------------- |
+| 🐧 Linux   | ✔️ Tested           |
+| 📱 Termux  | ✔️ Testing          |
+| 🪟 Windows | ⚠️ Not fully tested |
 
-### Windows: Not tested 
+---
 
-# Installation
+# 🚀 Installation
 
 ## 🐧 Linux
 
-### 1. Install the requirements
+### 1. Install Python and Git
 
 **Debian / Ubuntu:**
 
@@ -71,31 +84,21 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### 7. Test the installation
+### 7. Start X-Data
 
 ```bash
-xdata 
+xdata
 ```
 
-If everything is installed correctly, X-Data's menu will be displayed.
-
-### Updating X-Data
-
-```bash
-cd X-Data
-git pull
-source .venv/bin/activate
-pip install -r requirements.txt
-pip install -e .
-```
+If the installation was successful, the X-Data v1.2 menu will appear.
 
 ---
 
-# 📱 Termux
+## 📱 Termux
 
-X-Data can run on Android using **Termux**.
+X-Data can be run on Android using **Termux**.
 
-### 1. Update Termux
+### 1. Update packages
 
 ```bash
 pkg update
@@ -120,7 +123,7 @@ cd X-Data
 python3 -m venv .venv
 ```
 
-### 5. Activate the virtual environment
+### 5. Activate the environment
 
 ```bash
 source .venv/bin/activate
@@ -138,44 +141,37 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-### 8. Test the installation
+### 8. Start X-Data
 
 ```bash
 xdata
 ```
 
-X-Data should now be available directly through the `xdata` command.
+### Using X-Data again
 
-### Using X-Data again later
-
-After closing Termux, navigate back to the project and activate the environment:
+After closing Termux:
 
 ```bash
 cd X-Data
 source .venv/bin/activate
-```
-
-Then:
-
-```bash
 xdata
 ```
 
 ---
 
-# 🪟 Windows
+## 🪟 Windows
 
 ### 1. Install Python
 
-Download and install Python from the official Python website.
+Install Python from the official Python website.
 
-During installation, make sure to enable:
+During installation, enable:
 
 ```text
 Add Python to PATH
 ```
 
-Verify Python:
+Verify the installation:
 
 ```powershell
 python --version
@@ -215,28 +211,48 @@ python -m venv .venv
 ### 6. Install dependencies
 
 ```powershell
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ### 7. Install X-Data
 
 ```powershell
-pip install -e .
+python -m pip install -e .
 ```
 
-### 8. Test the installation
+### 8. Start X-Data
 
 ```powershell
 xdata
 ```
 
-If the command displays the X-Data menu, the installation was successful.
+If the X-Data menu appears, the installation was successful.
 
 ---
 
-# 🚀 Basic Usage
+# 🔄 Updating X-Data
 
-After installation, activate your virtual environment and run:
+From inside the X-Data directory:
+
+### Linux / Termux
+
+```bash
+git pull
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+```
+
+### Windows
+
+```powershell
+git pull
+.venv\Scripts\activate
+python -m pip install -r requirements.txt
+python -m pip install -e .
+```
+
+Then run:
 
 ```bash
 xdata
@@ -244,7 +260,21 @@ xdata
 
 ---
 
-# 🛠️ Development
+# 🛠️ Basic Usage
+
+Start the interactive interface:
+
+```bash
+xdata
+```
+
+X-Data provides an interactive menu containing the available tools.
+
+The toolkit is designed around public-source information and authorized investigations.
+
+---
+
+# 🧰 Development
 
 Clone the repository:
 
@@ -253,14 +283,21 @@ git clone https://github.com/tears64/X-Data.git
 cd X-Data
 ```
 
-Create and activate a virtual environment, then install the development dependencies:
+Create a virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install development dependencies:
 
 ```bash
 pip install -r requirements-dev.txt
 pip install -e .
 ```
 
-Run the tests:
+Run the test suite:
 
 ```bash
 pytest
@@ -296,18 +333,26 @@ X-Data/
 ├── VERSION
 ├── pyproject.toml
 ├── requirements.txt
-└── requirements-dev.txt
+├── requirements-dev.txt
+└── xdata_cli.py
 ```
 
 ---
 
 # ⚠️ Disclaimer
 
-X-Data is provided for **educational and authorized security/OSINT purposes only**.
+X-Data is provided for **educational, authorized security-testing, and legitimate OSINT purposes only**.
 
-The developers are not responsible for misuse of this software.
+Do not use X-Data to:
 
-Always respect applicable laws, terms of service, privacy, and authorization requirements when using X-Data.
+* Access accounts without authorization
+* Bypass authentication or security controls
+* Collect private information without permission
+* Conduct unauthorized network scanning
+* Capture credentials or authentication data
+* Harass, stalk, or target individuals
+
+You are responsible for complying with applicable laws, regulations, terms of service, and authorization requirements.
 
 ---
 
@@ -322,3 +367,6 @@ GitHub: https://github.com/tears64/X-Data
 # ⭐ Support
 
 If you find X-Data useful, consider giving the repository a ⭐ on GitHub.
+
+Contributions, bug reports, and improvements are welcome.
+
