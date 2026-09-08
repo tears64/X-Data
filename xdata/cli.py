@@ -42,13 +42,14 @@ TOOLS = [
     ("17", "OSINT Resources", "resources"),
     ("18", "Discord Webhook", "webhook"),
     ("19", "TempMail", "tempmail"),
+    ("20", "Credits", "credits"),
 ]
 
 SECTIONS = [
     ("OSINT", ["01","02","03","04","05"]),
     ("WEB / NETWORK", ["06","07","08","09","10","11","15"]),
     ("UTILITIES", ["13","14","16","17","19"]),
-    ("COMMUNITY", ["12","18"]),
+    ("COMMUNITY", ["12","18","20"]),
 ]
 
 def ascii_logo():
@@ -81,6 +82,24 @@ def menu():
         print_section(title, nums)
     print(c("  | [00] Exit" + " " * 45 + "|", YELLOW))
     print(c("  +" + "-" * 58, BLUE))
+
+def show_credits():
+    print()
+    print("  ╔══════════════════════════════════════════════════════════════╗")
+    print("  ║                        X-DATA CREDITS                       ║")
+    print("  ╚══════════════════════════════════════════════════════════════╝")
+    print()
+    print("  Made by")
+    print("    elmuerte")
+    print("    Discord: tears.ss")
+    print()
+    print("  Contributions / Support")
+    print("    profane")
+    print("    Discord: prfn7 / .w7mpus")
+    print()
+    print("  ─────────────────────────────────────────────────────────────")
+    print("  Thank you for supporting X-Data.")
+    print()
 
 def main():
     while True:
