@@ -356,11 +356,22 @@ You are responsible for complying with applicable laws, regulations, terms of se
 
 ---
 
-# 👤 Author
+# 👥 Credits
 
-**tears64**
+X-Data is made possible with contributions and support from:
 
-GitHub: https://github.com/tears64/X-Data
+**elmuerte**
+Discord: `tears.ss`
+
+**profane**
+Discord: `prfn7` / `.w7mpus`
+
+---
+
+### Special Thanks
+
+Thanks to everyone who has contributed ideas, testing, feedback, and support to the project.
+
 
 ---
 
